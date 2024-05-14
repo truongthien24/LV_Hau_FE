@@ -1,0 +1,35 @@
+.category {
+
+    .ant-collapse-item {
+
+        .ant-collapse-header {
+
+            span {
+                color: #fff !important;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .ant-collapse-content-box {
+        padding: 0 !important;
+    }
+}
+
+.category__mobile {
+    .ant-collapse-item {
+
+        .ant-collapse-header {
+
+            span {
+                color: #fff !important;
+                font-weight: 500;
+                font-size: 10px !important;
+            }
+        }
+    }
+
+    .ant-collapse-content-box {
+        padding: 0 !important;
+    }
+}

@@ -1,0 +1,103 @@
+// Start hoverToShow
+.hoverToShow {
+    transition: all .7s;
+
+    &:hover .hoverToShow-hide {
+        // display: block;
+        width: 100%;
+        transform: translateX(0);
+
+        svg {
+            animation-name: fadeOnLeft;
+            animation-duration: .5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: .3s;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0px 10px 5px #3790c7a6;
+    }
+
+
+    .hoverToShow-hide {
+        transition: all .5s;
+        // display: none;
+        transform: translateX(-50px);
+        width: 0;
+        
+
+        svg {
+            position: absolute;
+            left: -15%;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    }
+}
+// End hoverToShow
+
+// Start btnConfirmToLogin
+.btnConfirmToLogin {
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 15px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5CDB95;
+  }
+  
+  .btnConfirmToLogin span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+  }
+  
+  .btnConfirmToLogin:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+  }
+// End btnConfirmToLogin
+
+
+.ant-btn-save {
+    background-color: #3790c7 !important;
+    color: white,
+}
+
+.ant-btn-cancel {
+    background-color: white !important;
+    color: #3790c7;
+    border: #3790c7 1px solid;
+}
+
+.ant-btn-delete {
+    background-color: #ff6885 !important;
+    color: white;
+}
+
+.ant-btn-primary {
+    background-color: #498374 !important;
+    color: white,
+}
+
+@keyframes fadeOnLeft {
+    from {
+        left: -15%;
+        transform: translateY(-50%)
+    } 
+    to {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
