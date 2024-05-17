@@ -17,6 +17,10 @@ import useCreateDanhGia from "./hook/useCreateDanhGia";
 import useGetDataTaiKhoan from "./hook/useGetDataTaiKhoan";
 import useGetAccountByID from "./hook/useGetAccountByID";
 import Details from "./component/Details";
+import FormSearchAdmin from "page/admin/shareComponent/form/formSearch/FormSearchAdmin";
+import FormTextField from "page/admin/shareComponent/form/FormTextField";
+import FormSelect from "page/admin/shareComponent/form/FormSelect";
+import { useForm } from "react-hook-form";
 // import useGetDataNhaXuatBan from "./hook/useGetDataNhaXuatBan";
 // import useGetDetailNhaXuatBan from "./hook/useGetDetailNhaXuatBan";
 // import useDeleteNhaXuatBan from "./hook/useDeleteNhaXuatBan";
@@ -33,6 +37,16 @@ const TaiKhoanManagement = () => {
   const { t } = useTranslation();
 
   const dispatch = useDispatch();
+
+  const method  = useForm({
+    mode: "onSubmit",
+    defaultValues: {
+      tenDangNhap: "",
+      loaiTaiKhoan: "",
+    }
+  });
+
+  const {control} = method;
 
   const onOpenNoiDungDanhGia = (state) => {
     setIsOpenNoiDungDanhGia(state);
@@ -132,19 +146,32 @@ const TaiKhoanManagement = () => {
 
   useLoadingEffect(isDataLoading);
 
+  const handleSearch = (data) => {
+    
+  }
+
   return (
     <>
-      <div className="h-[12%] flex justify-between items-center">
-        <h3 className="text-[20px] text-[#3790c7] font-bold">
-          {t("Quản lý tài khoản")}
-        </h3>
-        {/* <button
-          className="flex items-center justify-center bg-[#3790c7] text-white py-[10px] px-[20px] rounded-[7px] duration-300 hover:shadow-[#3790c7a6] hover:shadow-lg hover:translate-y-[-3px]"
-          type="submit"
-          onClick={handleAdd}
-        >
-          {t("add")}
-        </button> */}
+      <div className="h-[12%] pb-[10px]">
+        <FormSearchAdmin method={method} submitForm={handleSearch} buttons={["excel", "add", "find"]}>
+          <div className="">
+            <span>Tên đăng nhập</span>
+            <FormTextField name="tenDangNhap" control={control}/>
+          </div>
+          <div className="">
+            <span>Loại tài khoản</span>
+            <FormSelect option={[
+                {
+                  label: "Quản trị viên",
+                  value: "admin"
+                },
+                {
+                  label: "Khách hàng",
+                  value: "guest"
+                },
+            ]} name="loaiTaiKhoan" control={control}/>
+          </div>
+        </FormSearchAdmin>
       </div>
       <div className="h-[88%]">
         <TableMain

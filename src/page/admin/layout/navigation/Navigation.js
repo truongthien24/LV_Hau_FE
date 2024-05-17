@@ -67,10 +67,10 @@ export const Navigation = () => {
     getItem(
       <div
         onClick={() => {
-          navigate("/admin/bookManagement");
+          navigate("/admin/productManagement");
         }}
       >
-        Quản lý sách
+        Quản lý quản phẩm
       </div>,
       "3",
       <BookOutlined />
@@ -79,54 +79,21 @@ export const Navigation = () => {
       getItem(
         <div
           onClick={() => {
-            navigate("/admin/theLoaiManagement");
+            navigate("/admin/bannerManagement");
           }}
         >
-          Quản lý Thể loại
-        </div>,
-        "4",
-        <SmileOutlined />
-      ),
-      getItem(
-        <div
-          onClick={() => {
-            navigate("/admin/tacGiaManagement");
-          }}
-        >
-          Quản lý Tác giả
-        </div>,
-        "5",
-        <UserAddOutlined />
-      ),
-      getItem(
-        <div
-          onClick={() => {
-            navigate("/admin/nhaCungCapManagement");
-          }}
-        >
-          Quản lý Nhà cung cấp
-        </div>,
-        "6",
-        <HomeOutlined />
-      ),
-      getItem(
-        <div
-          onClick={() => {
-            navigate("/admin/nhaXuatBanManagement");
-          }}
-        >
-          Quản lý Nhà Xuất bản
+          Quản lý banner
         </div>,
         "7",
-        <HomeOutlined />
+        <EditOutlined />
       ),
       getItem(
         <div
           onClick={() => {
-            navigate("/admin/ngonNguManagement");
+            navigate("/admin/brandManagement");
           }}
         >
-          Quản lý ngôn ngữ
+          Quản lý thương hiệu
         </div>,
         "8",
         <EditOutlined />
@@ -137,34 +104,12 @@ export const Navigation = () => {
             navigate("/admin/maGiamManagement");
           }}
         >
-          Quản lý mã giảm giá
+          Quản lý khuyến mãi
         </div>,
         "9",
         <PercentageOutlined />
       ),
     ]),
-    // getItem("Booking", "sub2", <MailOutlined />, [
-    //   getItem(
-    //     <div
-    //       onClick={() => {
-    //         navigate("/admin/donHangManagement");
-    //       }}
-    //     >
-    //       Quản lý đơn hàng
-    //     </div>,
-    //     "10"
-    //   ),
-    //   getItem(
-    //     <div
-    //       onClick={() => {
-    //         navigate("/admin/bookingService");
-    //       }}
-    //     >
-    //       Booking Service
-    //     </div>,
-    //     "11"
-    //   ),
-    // ]),
     getItem(
       <div
         onClick={() => {
@@ -175,39 +120,6 @@ export const Navigation = () => {
       </div>,
       "10",
       <MailOutlined />
-    ),
-    getItem(
-      <div
-        onClick={() => {
-          navigate("/admin/danhGiaManagement");
-        }}
-      >
-        Quản lý đánh giá
-      </div>,
-      "12",
-      <ContainerOutlined />
-    ),
-    getItem(
-      <div
-        onClick={() => {
-          navigate("/admin/baiVietManagement");
-        }}
-      >
-        Quản lý bài viết
-      </div>,
-      "13",
-      <WindowsOutlined />
-    ),
-    getItem(
-      <div
-        onClick={() => {
-          navigate("/admin/khachHangManagement");
-        }}
-      >
-        Quản lý khach hang
-      </div>,
-      "14",
-      <WindowsOutlined />
     ),
   ];
 

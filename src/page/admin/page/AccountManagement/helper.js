@@ -34,29 +34,6 @@ export const columns = (onOpenNoiDungDanhGia) => {
         );
       },
     },
-    {
-      title: "Xác thực email",
-      dataIndex: "xacThucEmail",
-      key: "xacThucEmail",
-      cell: (cell) => {
-        return (
-          <span
-            className="font-[500]"
-            style={{
-              color: `${
-                cell?.xacThucEmail ? COLOR.primaryColor : COLOR.secondaryColor
-              }`,
-            }}
-          >
-            {cell?.loaiTaiKhoan == "user"
-              ? cell?.xacThucEmail
-                ? "Đã xác thực"
-                : "Chưa xác thực"
-              : ""}
-          </span>
-        );
-      },
-    },
     // {
     //   title: "Thông tin nhận hàng",
     //   dataIndex: "thongTinNhanHang",

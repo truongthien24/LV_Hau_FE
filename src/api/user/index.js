@@ -47,6 +47,12 @@ export default {
     });
   },
 
+  getTaiKhoanByField: (params) => {
+    return axiosWrapper.post(`/getTaiKhoanByField`, {
+      ...params,
+    });
+  },
+
   //   update: (params: object) => {
   //     return axiosWrapper.post(`/Purchasing/DataService/Update`, {
   //       ...params,

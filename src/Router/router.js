@@ -12,13 +12,7 @@ import { BookManagement } from "../page/admin/page/RoomManagement/BookManagement
 import { Introduce } from "../page/user/page/introduce/Introduce";
 import { Contact } from "page/user/page/contact/Contact";
 import VerifyEmail from "page/user/page/verifyEmail/VerifyEmail";
-import TheLoaiManagement from "page/admin/page/System/theLoaiManagement/TheLoaiManagement";
-import TacGiaManagement from "page/admin/page/System/tacGiaManagement/TacGiaManagement";
-import NhaCungCapManagement from "page/admin/page/System/nhaCungCapManagement/NhaCungCapManagement";
-import NhaXuatBanManagement from "page/admin/page/System/nhaXuatBanManagement/NhaXuatBanManagement";
 import Cart from "page/user/page/cart/Cart";
-import NgonNguManagement from "page/admin/page/System/ngonNguManagement/NgonNguManagement";
-import { BaiVietManagement } from "page/admin/page/baiVietManagement/BaiVietManagement";
 import Payment from "page/user/page/payment/Payment";
 import InfoBook from "page/user/page/infoBook/InfoBook";
 // import { Contact } from '../page/user/page/contact/Contact';
@@ -27,7 +21,6 @@ import MaGiamManagement from "page/admin/page/System/maGiamManagement/MaGiamMana
 import { AllBooks } from "page/user/page/allBooks/allBook";
 import BookCategory from "page/user/page/bookCategory/BookCategory";
 import DonHangManagement from "page/admin/page/donHangManagement/DonHangManagement";
-import DanhGiaManagement from "page/admin/page/danhGiaManagement/DanhGiaManagement";
 import Favourite from "page/user/page/favourite/Favourite";
 import TaiKhoanManagement from "page/admin/page/AccountManagement/TaiKhoanManagement";
 import { About } from "page/user/page/about/about";
@@ -91,22 +84,8 @@ export const MainRoutes = () => {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="accountManagement" element={<TaiKhoanManagement />} />
           <Route path="bookManagement" element={<BookManagement />} />
-          <Route path="theLoaiManagement" element={<TheLoaiManagement />} />
-          <Route path="tacGiaManagement" element={<TacGiaManagement />} />
-          <Route path="ngonNguManagement" element={<NgonNguManagement />} />
-          <Route path="maGiamManagement" element={<MaGiamManagement />} />
-          <Route path="baiVietManagement" element={<BaiVietManagement />} />
           <Route path="donHangManagement" element={<DonHangManagement />} />
-          <Route path="danhGiaManagement" element={<DanhGiaManagement />} />
           <Route path="khachHangManagement" element={<KhachHangManagement />} />
-          <Route
-            path="nhaCungCapManagement"
-            element={<NhaCungCapManagement />}
-          />
-          <Route
-            path="nhaXuatBanManagement"
-            element={<NhaXuatBanManagement />}
-          />
           <Route path="login" element={<LoginAdmin />} />
           <Route path="*" element={<div>Page not found</div>} />
         </Route>

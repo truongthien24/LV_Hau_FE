@@ -2,7 +2,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import useLoadingEffect from "fuse/hook/useLoadingEffect";
 import _ from "lodash";
 import CustomButton from "page/admin/shareComponent/button/CustomButton";
-import FormNumberPhone from "page/admin/shareComponent/form/FormNumberPhone";
 import FormTextField from "page/admin/shareComponent/form/FormTextField";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -121,25 +120,7 @@ const Details = ({
           />
         </div>
 
-        <div className="col-span-1">
-          <FormSelect
-            label="Xác thực email"
-            name="xacThucEmail"
-            errors={errors}
-            control={control}
-            disable={disable}
-            option={[
-              {
-                label: "Chưa xác nhận",
-                value: false,
-              },
-              {
-                label: "Đã xác nhận",
-                value: true,
-              },
-            ]}
-          />
-        </div>
+       
         <div className="col-span-1">
           <FormSelect
             label="Loại tài khoản"
@@ -159,25 +140,7 @@ const Details = ({
             ]}
           />
         </div>
-        <div className="col-span-1">
-          <FormSelect
-            label="Báo xấu"
-            name="baoXau"
-            errors={errors}
-            control={control}
-            disable={disable}
-            option={[
-              {
-                label: "Tốt",
-                value: false,
-              },
-              {
-                label: "Xấu",
-                value: true,
-              },
-            ]}
-          />
-        </div>
+      
         <div className="col-span-3 mt-[20px]">
           <CustomButton
             label="Lưu"

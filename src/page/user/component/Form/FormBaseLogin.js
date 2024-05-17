@@ -17,12 +17,10 @@ export const FormBaseLogin = (props) => {
 
   // Form
   const {
-    setValue,
     watch,
     formState: { errors },
     handleSubmit,
     register,
-    getValues,
   } = useForm({
     mode: "onChange",
     defaultValues: initialValue,
@@ -65,7 +63,7 @@ export const FormBaseLogin = (props) => {
   };
 
   const handleLogin = () => {
-    dispatch(methodSubmit({ data: watch() }));
+    methodSubmit({ data: watch() });
   };
 
   const handleCancel = () => {

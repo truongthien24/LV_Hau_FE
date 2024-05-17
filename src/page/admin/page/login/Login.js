@@ -36,12 +36,6 @@ export const Login = () => {
     matKhau: yup.string().required("Please input...."),
   });
 
-  // useEffect(()=> {
-  //   if(window.location.pathname === "/user/login") {
-  //     window.onclick = () => navigate("/user");
-  //   }
-  // })
-
   const login = async (data) => {
     await mutate({
       Data: data?.data,
@@ -63,15 +57,15 @@ export const Login = () => {
 
   return (
     <>
-      <div className="fixed flex items-center top-0 left-0 w-screen h-screen bg-[#ffeadc] z-[101]">
-        <div className="flex flex-1 items-center justify-center">
-          <img src="/images/logo.png" className="w-[200px] md:w-[250px]" />
-        </div>
-        <div className="flex flex-1 items-center justify-center">
-          <div
-            className="bg-[#f7d38f00] w-[85%] md:w-[450px] rounded-[10px] px-[15px] md:px-[30px] py-[20px]"
-            style={{ boxShadow: "rgba(0, 0, 0, 0.26) 0px 5px 40px" }}
-          >
+      <div className="fixed flex justify-center items-center top-0 left-0 w-screen h-screen bg-[#ffeadc] z-[101]">
+        <div
+          className="bg-[#f7d38f00] rounded-[10px] flex items-center px-[15px] md:px-[30px] py-[20px] w-[200px] md:w-[300px] lg:w-[400px] xl:w-[470px] 2xl:w-[550px]"
+          style={{ boxShadow: "rgba(0, 0, 0, 0.26) 0px 5px 40px" }}
+        >
+          {/* <div className="items-center justify-center">
+            <img src="/images/logo.png" className="w-[120px] md:w-[200px]" />
+          </div> */}
+          <div className="w-full">
             <div className="flex items-center justify-between mb-[20px] md:mb-[30px]">
               <h3 className="text-[20px] md:text-[25px] font-[500] text-[#498374]">
                 {t("login")}
