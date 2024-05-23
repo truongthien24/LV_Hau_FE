@@ -24,7 +24,7 @@ const FormSearchAdmin = ({ children, method, submitForm, buttons = [] }) => {
       {
         buttons?.length  > 0
         &&
-        <div className="ml-[10px] absolute bottom-[-10px] right-2 bg-[#001529] rounded-[20px] py-[5px] px-[10px] flex items-center text-white">
+        <div className="ml-[10px] absolute bottom-[10px] right-2 bg-[#001529] rounded-[20px] py-[5px] px-[10px] flex items-center text-white">
             {
               buttons.map((btn, index) => {
                   switch(btn) {

@@ -21,6 +21,7 @@ import FormSearchAdmin from "page/admin/shareComponent/form/formSearch/FormSearc
 import FormTextField from "page/admin/shareComponent/form/FormTextField";
 import FormSelect from "page/admin/shareComponent/form/FormSelect";
 import { useForm } from "react-hook-form";
+import useFilters from "method/useFilter";
 // import useGetDataNhaXuatBan from "./hook/useGetDataNhaXuatBan";
 // import useGetDetailNhaXuatBan from "./hook/useGetDetailNhaXuatBan";
 // import useDeleteNhaXuatBan from "./hook/useDeleteNhaXuatBan";
@@ -38,12 +39,14 @@ const TaiKhoanManagement = () => {
 
   const dispatch = useDispatch();
 
+  const defaultValues = {
+    tenDangNhap: "",
+    loaiTaiKhoan: "",
+  }
+
   const method  = useForm({
     mode: "onSubmit",
-    defaultValues: {
-      tenDangNhap: "",
-      loaiTaiKhoan: "",
-    }
+    defaultValues
   });
 
   const {control} = method;
@@ -52,9 +55,11 @@ const TaiKhoanManagement = () => {
     setIsOpenNoiDungDanhGia(state);
   };
 
+  const { count, setCount, filters, onFilter } = useFilters(defaultValues);
+
   // Get Data
   const { taiKhoanData, isDataLoading, fetchData, isFetching } =
-    useGetDataTaiKhoan("0", "0");
+    useGetDataTaiKhoan("0", "0", filters);
 
 
   const {
@@ -147,7 +152,9 @@ const TaiKhoanManagement = () => {
   useLoadingEffect(isDataLoading);
 
   const handleSearch = (data) => {
-    
+    console.log('data', data);
+    setCount(count+1);
+    onFilter(data);
   }
 
   return (

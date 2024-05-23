@@ -67,7 +67,7 @@ export const Navigation = () => {
     getItem(
       <div
         onClick={() => {
-          navigate("/admin/productManagement");
+          navigate("/admin/sanPhamManagement");
         }}
       >
         Quản lý quản phẩm

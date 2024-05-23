@@ -8,7 +8,7 @@ const getApiData = async (pageIndex = 0, pageSize = 0, data) => {
     Data: data
   };
 
-  const taiKhoans = await apiServices.taiKhoan.getAllTaiKhoan({
+  const taiKhoans = await apiServices.taiKhoan.getTaiKhoanByField({
     ...params,
   });
 

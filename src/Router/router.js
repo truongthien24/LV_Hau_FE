@@ -26,6 +26,7 @@ import TaiKhoanManagement from "page/admin/page/AccountManagement/TaiKhoanManage
 import { About } from "page/user/page/about/about";
 import { BaiViet } from "page/user/page/baiViet/baiViet";
 import KhachHangManagement from "page/admin/page/KhachHangManagement/KhachHangManagement";
+import { SanPhamManagement } from "page/admin/page/SanPhamManagement/SanPhamManagement";
 
 export const MainRoutes = () => {
   const { pathname } = useLocation();
@@ -83,7 +84,7 @@ export const MainRoutes = () => {
           <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="accountManagement" element={<TaiKhoanManagement />} />
-          <Route path="bookManagement" element={<BookManagement />} />
+          <Route path="sanPhamManagement" element={<SanPhamManagement />} />
           <Route path="donHangManagement" element={<DonHangManagement />} />
           <Route path="khachHangManagement" element={<KhachHangManagement />} />
           <Route path="login" element={<LoginAdmin />} />
