@@ -11,6 +11,16 @@ export const columns = (onClickFuncc) => {
         dataIndex: "loaiSanPham",
         key: "loaiSanPham",
         width: "15%",
+        cell: (cell) => {
+          return (
+            <span
+              className="font-[500]"
+        
+            >
+              {cell?.loaiSanPham == 0 ? "Văn phòng" : cell?.loaiSanPham == 1 ? "Gaming" : "Siêu mỏng"}
+            </span>
+          );
+        },
       },
   
       {
