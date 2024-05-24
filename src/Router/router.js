@@ -8,24 +8,11 @@ import { Register } from "../page/user/page/register/Register";
 import { Profile } from "../page/user/page/profile/Profile";
 import { Dashboard } from "../page/admin/page/Dashboard/Dashboard";
 import { Login as LoginAdmin } from "../page/admin/page/login/Login";
-import { BookManagement } from "../page/admin/page/RoomManagement/BookManagement";
-import { Introduce } from "../page/user/page/introduce/Introduce";
-import { Contact } from "page/user/page/contact/Contact";
 import VerifyEmail from "page/user/page/verifyEmail/VerifyEmail";
-import Cart from "page/user/page/cart/Cart";
-import Payment from "page/user/page/payment/Payment";
-import InfoBook from "page/user/page/infoBook/InfoBook";
 // import { Contact } from '../page/user/page/contact/Contact';
 import { Button, Result } from "antd";
-import MaGiamManagement from "page/admin/page/System/maGiamManagement/MaGiamManagement";
-import { AllBooks } from "page/user/page/allBooks/allBook";
-import BookCategory from "page/user/page/bookCategory/BookCategory";
 import DonHangManagement from "page/admin/page/donHangManagement/DonHangManagement";
-import Favourite from "page/user/page/favourite/Favourite";
 import TaiKhoanManagement from "page/admin/page/AccountManagement/TaiKhoanManagement";
-import { About } from "page/user/page/about/about";
-import { BaiViet } from "page/user/page/baiViet/baiViet";
-import KhachHangManagement from "page/admin/page/KhachHangManagement/KhachHangManagement";
 import { SanPhamManagement } from "page/admin/page/SanPhamManagement/SanPhamManagement";
 
 export const MainRoutes = () => {
@@ -44,7 +31,7 @@ export const MainRoutes = () => {
       <Routes>
         {/* Trang mặc định */}
         {/* <Route path="/" element={<Welcome/>}/> */}
-        <Route path="/" element={<Layout1 />}>
+        {/* <Route path="/" element={<Layout1 />}>
           <Route index element={<HomeUser />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
@@ -59,7 +46,7 @@ export const MainRoutes = () => {
           <Route path="book" element={<BookCategory />} />
           <Route path="favourite" element={<Favourite />} />
           <Route path="baiViet" element={<BaiViet />} />
-        </Route>
+        </Route> */}
         <Route
           path="*"
           element={
@@ -86,7 +73,6 @@ export const MainRoutes = () => {
           <Route path="accountManagement" element={<TaiKhoanManagement />} />
           <Route path="sanPhamManagement" element={<SanPhamManagement />} />
           <Route path="donHangManagement" element={<DonHangManagement />} />
-          <Route path="khachHangManagement" element={<KhachHangManagement />} />
           <Route path="login" element={<LoginAdmin />} />
           <Route path="*" element={<div>Page not found</div>} />
         </Route>

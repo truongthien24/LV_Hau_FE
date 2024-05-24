@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import { Empty } from "antd";
 import OutsideClickDetector from "component/OutSide/OutSideClickDetector";
 import { useNavigate } from "react-router-dom";
-import useGetDataBook from "page/admin/page/RoomManagement/hook/useGetDataBook";
-import useFindDataBook from "page/admin/page/RoomManagement/hook/useFindBook";
 const ResultSearch = ({ data, resultRef, searchRef }) => {
 
-  const { sachData, isDataLoading, fetchData, isFetching } = useFindDataBook({tenSach: data});
+  // const { sachData, isDataLoading, fetchData, isFetching } = useFindDataBook({tenSach: data});
+  const sachData = []
 
   const navigate = useNavigate();
 
@@ -19,26 +18,7 @@ const ResultSearch = ({ data, resultRef, searchRef }) => {
     return lowerCaseStr.trim();
   }
   const renderResult = () => {
-    // Kiểm tra nếu có dữ liệu trong sachData
     if (sachData?.length > 0) {
-      // Tìm kiếm dữ liệu dựa trên các trường tên
-      // const filteredData = sachData.filter((sach) => {
-      //   const { tenTacGia, tenNhaXuatBan, tenTheLoai, tenSach } = sach;
-      //   // Loại bỏ khoảng trắng và chuẩn hóa văn bản
-      //   const processedString = removeAccentsAndLowerCase(data);
-      //   const searchTerms = [
-      //     removeAccentsAndLowerCase(tenTacGia),
-      //     removeAccentsAndLowerCase(tenNhaXuatBan),
-      //     removeAccentsAndLowerCase(tenTheLoai),
-      //     removeAccentsAndLowerCase(tenSach),
-      //   ];
-
-      //   // Kiểm tra nếu bất kỳ trường nào chứa searchText
-      //   return searchTerms.some((term) => term.includes(processedString));
-      // });
-      // // Kiểm tra nếu có kết quả tìm kiếm
-      // if (filteredData.length > 0) {
-        //đổ ra giao diện với data đã được xử lý
         return sachData.map((sach, index) => (
           <div
             className="flex rounded-[5px] duration-500 cursor-pointer hover:bg-[#eaeaea]"
@@ -61,10 +41,6 @@ const ResultSearch = ({ data, resultRef, searchRef }) => {
             </div>
           </div>
         ));
-      // } else {
-      //   // Hiển thị Empty component nếu không có kết quả tìm kiếm
-      //   return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />;
-      // }
     }
 
     // Hiển thị Empty component nếu sachData không có dữ liệu

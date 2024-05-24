@@ -77,7 +77,7 @@ export const FormBaseLogin = (props) => {
         onSubmit={handleSubmit(handleLogin)}
       >
         {renderInput()}
-        <div className="w-[90%] lg:w-[80%] mt-[10px] flex justify-between items-center">
+        {/* <div className="w-[90%] lg:w-[80%] mt-[10px] flex justify-between items-center">
           <span
             className="text-orange-400 cursor-pointer hover:underline text-[14px] md:text-[16px]"
             onClick={() => {
@@ -103,7 +103,7 @@ export const FormBaseLogin = (props) => {
           >
             Chưa có tài khoản
           </span>
-        </div>
+        </div> */}
         <div className="mt-[40px] xl:mt-[70px] w-[70%] grid grid-cols-2 gap-3">
           <button
             className="flex items-center justify-center bg-[white] py-[12px] rounded-[7px]"
